@@ -16,5 +16,7 @@ while i < count :
     for tag in aTags : 
         tagList.append(tag.get("href", None))
     url = tagList[position-1]
-    print(url)
+    start = url.find("by")
+    end = url.find("html")
+    print(url[start+3:end-1])
     i = i + 1
